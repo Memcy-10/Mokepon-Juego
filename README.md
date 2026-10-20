@@ -1,6 +1,8 @@
 # Mokepon
 
 Juego web de combate entre Mokepones. Elige una mascota, recorre el mapa y enfréntate a los Mokepones de otros jugadores conectados al mismo servidor.
+# CERTIFICADO
+https://platzi.com/p/maicolmontoya.c2007/curso/3208-course/diploma/detalle/
 
 ## Requisitos
 
