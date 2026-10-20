@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 8px;
+    background-color: #041562;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titulo {
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    text-align: center;
+}
+
+.subtitulo {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+    display: flex;
+    width: 180px;
+    height: 100px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #11468f;
+    color: white;
+    cursor: pointer;
+}
+
+.tarjeta-de-mokepon img {
+    width: 80px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    background-color: #5d8bf4;
+}
+
+#boton-mascota {
+    width: 180px;
+    height: 40px;
+    margin-top: 30px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: transparent;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+#seleccionar-ataque {
+    display: none;
+    width: min(900px, 100%);
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arena {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 20px;
+}
+
+.ataques-jugador,
+.ataques-enemigo {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.mokepon-combate {
+    display: flex;
+    min-height: 230px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #0b2679;
+    text-align: center;
+}
+
+.mokepon-combate img {
+    width: min(150px, 75%);
+    height: 135px;
+    object-fit: contain;
+}
+
+.mokepon-combate p {
+    margin: 4px 0;
+}
+
+.mokepon-combate p:last-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tarjetas-ataques {
+    display: grid;
+    margin-top: 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.boton-de-ataque {
+    min-width: 0;
+    padding: 10px 8px;
+    border: 0;
+    border-radius: 20px;
+    background-color: #11468f;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.boton-de-ataque:hover:not(:disabled) {
+    background-color: #5d8bf4;
+}
+
+.boton-de-ataque:focus-visible,
+#boton-mascota:focus-visible,
+#boton-reiniciar:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.boton-de-ataque:disabled {
+    cursor: not-allowed;
+    opacity: .55;
+}
+
+#mensajes {
+    display: flex;
+    width: 100%;
+    height: 240px;
+    max-height: 32vh;
+    min-height: 160px;
+    margin-top: 14px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 20px;
+    background-color: #eee;
+    color: #041562;
+    scroll-behavior: smooth;
+}
+
+#mensajes > p {
+    margin: 0 0 10px;
+    padding: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+#mensajes > p:first-child:last-child {
+    text-align: center;
+}
+
+#reiniciar {
+    display: none;
+    margin-top: 8px;
+    text-align: center;
+}
+
+#boton-reiniciar {
+    min-width: 110px;
+    padding: 8px 18px;
+    border: 1px solid #11468f;
+    border-radius: 18px;
+    background: #eee;
+    color: #11468f;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+/* Seccion mapa */
+.subtitulo{
+    color: #cfdbf7;
+    
+}
+.button{
+    width: 75px;
+    height: 40px;
+    border-radius: 15px;
+    background: #0F42C0;
+    font-weight: bold;
+    color: #e6d9e7;
+    border: solid #5882E8 1px ;
+}
+#boton-arriba{
+margin-bottom: 14px;
+}
+.botones-abajo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+@media (max-width: 560px) {
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arena {
+        grid-template-columns: 1fr;
+    }
+
+    .mokepon-combate {
+        min-height: 200px;
+    }
+
+    #mensajes {
+        height: 210px;
+        max-height: 30vh;
+    }
+    .ver-mapa{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .botones-abajo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
